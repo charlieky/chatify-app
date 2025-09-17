@@ -14,6 +14,5 @@ import { arcjetProtection } from "../middleware/arcjet.middleware.js";
    router.get("/contacts", protectRoute, getAllContacts);
    router.get("/chats", protectRoute, getChatPartners);
    router.get("/:id", protectRoute, getMessagesByUserId);
-   router.post("/send:id", protectRoute, sendMessage);
-
+   router.post("/send/:id", protectRoute, sendMessage);
 export default router;
